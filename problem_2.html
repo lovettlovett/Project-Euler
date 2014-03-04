@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS4LIFE</title>
+	</head>
+		<body>
+			<h1>Project Euler #2</h1>
+			<script type="text/javascript">
+			var array_1 = [1, 2];
+			var array_2 = [1, 2];
+
+			var i = 0;
+			while(i < 30) {
+				array_1.push((array_2[0] + array_2[1]));
+				array_2.push((array_2[0] + array_2[1]));
+				array_2.splice(0,1);
+				i++;
+			};
+
+			var x = 0; 
+			var evens = [];
+			while(x < array_1.length) {
+				if((array_1[x] % 2) === 0) {
+						evens.push((array_1[x]));
+					};
+				x++;
+			};
+
+			var y = 0;
+			while(y < evens.length) {
+				var sum = 0;
+				sum = (sum + evens[y]);
+				y++;
+			};
+
+			console.log(sum)
+			</script>
+		</body>
+
+</html>
